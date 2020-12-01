@@ -8,8 +8,17 @@ import {Amplify} from 'aws-amplify'
 Amplify.configure({
   Auth: {
     region: "ap-northeast-1",
-    userPoolId: 'ユーザプールID',
-    userPoolWebClientId: 'クライアントID',
+    userPoolId: process.env.REACT_APP_USER_POOL_ID,
+    userPoolWebClientId: process.env.REACT_APP_USER_POOL_CLIENT_ID,
+  },
+  API: {
+    endpoints: [
+      {
+        name: "TestAPI",
+        endpoint: process.env.REACT_APP_API_GW_ENDPOINT,
+        region: "ap-northeast-1",
+      }
+    ]
   }
 })
 
