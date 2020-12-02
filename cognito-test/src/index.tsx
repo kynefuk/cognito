@@ -10,6 +10,7 @@ Amplify.configure({
     region: "ap-northeast-1",
     userPoolId: process.env.REACT_APP_USER_POOL_ID,
     userPoolWebClientId: process.env.REACT_APP_USER_POOL_CLIENT_ID,
+    identityPoolId: process.env.REACT_APP_ID_POOL_ID,
   },
   API: {
     endpoints: [
